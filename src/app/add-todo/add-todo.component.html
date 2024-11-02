@@ -1,0 +1,5 @@
+<div class="add-todo-form">
+    <input [(ngModel)]="task" type="text" placeholder="New Task"/>
+    <input [(ngModel)]="duration" type="number" placeholder="Duration (hours)" min="0.1"/>
+    <button (click)="onAdd()">Add Task</button>
+</div>

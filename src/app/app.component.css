@@ -1,0 +1,12 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, #f857a6, #ff5858);
+  }
+  
+  .todo-app {
+    background: white;
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  }

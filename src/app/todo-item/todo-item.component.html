@@ -1,0 +1,6 @@
+<li [ngClass]="{completed: todo.completed}">
+    {{ todo.task }} - {{todo.duration | number: '1.0-2'}} hours
+  <span * ngIf="todo.priority && todo.priority !== 'low'"> (Priority: {{ todo.priority }})</span>
+  <button *ngIf="!todo.completed" (click)="complete.emit()">Complete</button>
+  <button (click)="delete.emit()">X</button>
+</li>
