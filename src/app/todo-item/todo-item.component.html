@@ -1,6 +1,14 @@
-<li [ngClass]="{completed: todo.completed}">
-    {{ todo.task }} - {{todo.duration | number: '1.0-2'}} hours
-  <span * ngIf="todo.priority && todo.priority !== 'low'"> (Priority: {{ todo.priority }})</span>
-  <button *ngIf="!todo.completed" (click)="complete.emit()">Complete</button>
-  <button (click)="delete.emit()">X</button>
-</li>
+<div  class="todo-grid">
+  <div class="todo-details">
+    <span class="task">{{ todo.task }}</span>
+    <span>{{todo.duration | number: '1.0-2'}} hours</span>
+    <span *ngIf="todo.priority === 'low'" class="noPriority"> (Priority: {{ todo.priority }})</span>
+    <span *ngIf="todo.priority === 'high'" class="upArrow">&uarr; (Priority: {{todo.priority}})</span>
+    <span *ngIf="todo.priority === 'medium'" class="downArrow">&darr; (Priority: {{todo.priority}})</span>
+
+  </div>
+  <div class="todo-buttons">
+    <button *ngIf="!todo.completed" (click)="onComplete()">Complete</button>
+    <button (click)="onDelete()">Delete</button>
+    </div>
+</div>

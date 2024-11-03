@@ -17,7 +17,7 @@ export class AddTodoComponent {
     if (this.task && this.duration > 0) {
       this.add.emit({
         task: this.task, 
-        duration: this.duration,
+        duration: Number(this.duration),
         priority: this.priority,
         completed: false
       }); // Pass duration to the event emitter
